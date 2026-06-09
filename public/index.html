@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'IA au quotidien — Gagne 10 heures par semaine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBFBFD;--surface:#FFFFFF;--ink:#1C1D24;--muted:#737984;
+    --primary:#5B54E6;--primary-soft:#F1F0FC;--accent:#DD8B26;--accent-soft:#FCF6EC;
+    --border:#EEEFF3;--shadow:0 1px 2px rgba(20,21,28,.03),0 8px 24px rgba(20,21,28,.05);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Newsreader',Georgia,serif;font-size:19px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  /* hero */
+  .hero{padding:90px 0 50px;text-align:center}
+  .kicker{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--primary);margin-bottom:22px}
+  h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(38px,7vw,64px);line-height:1;letter-spacing:-.03em;margin-bottom:22px}
+  h1 em{font-style:normal;color:var(--accent)}
+  .lede{font-size:clamp(19px,2.3vw,23px);color:var(--muted);max-width:560px;margin:0 auto 36px}
+  .cta{display:inline-flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;background:var(--primary);color:#fff;border:none;padding:16px 30px;border-radius:12px;cursor:pointer;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(91,84,230,.28)}
+  .cta:disabled{opacity:.6;cursor:default;transform:none}
+  .price-note{font-family:'Space Grotesk',sans-serif;font-size:13.5px;color:var(--muted);margin-top:14px}
+  .price-note b{color:var(--ink)}
+  .err{color:#C0392B;font-size:15px;margin-top:16px;min-height:18px;font-family:'Space Grotesk',sans-serif}
+  /* meter strip */
+  .strip{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin:54px 0;padding:26px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .strip .stat{text-align:center}
+  .strip .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;color:var(--accent);line-height:1}
+  .strip .l{font-family:'Space Grotesk',sans-serif;font-size:12.5px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+  /* content */
+  section{padding:18px 0 36px}
+  h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(24px,3.4vw,32px);letter-spacing:-.02em;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:26px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:18px 20px}
+  .card .t{display:flex;align-items:center;gap:9px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;margin-bottom:4px}
+  .card .t .d{width:7px;height:7px;border-radius:50%;background:var(--primary);flex:none}
+  .card .x{font-size:16px;color:var(--muted);line-height:1.5}
+  /* final cta */
+  .final{text-align:center;padding:56px 0 30px;margin-top:30px;border-top:1px solid var(--border)}
+  footer{padding:30px 0 50px;text-align:center;font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--muted)}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kicker">Le guide pratique francophone</div>
+    <h1>Gagne <em>10 heures</em> par semaine avec l'IA.</h1>
+    <p class="lede">Sans jargon, sans théorie inutile. Des méthodes concrètes que tu appliques dès aujourd'hui, sur les tâches que tu fais déjà.</p>
+    <button class="cta" id="buy">Débloquer l'accès →</button>
+    <div class="price-note"><b id="price">19 €</b> · paiement unique · accès immédiat</div>
+    <div class="err" id="err"></div>
+  </div>
+
+  <div class="strip">
+    <div class="stat"><div class="n">8</div><div class="l">chapitres</div></div>
+    <div class="stat"><div class="n">12</div><div class="l">prompts prêts</div></div>
+    <div class="stat"><div class="n">~10 h</div><div class="l">gagnées / sem.</div></div>
+  </div>
+
+  <section>
+    <h2>Ce que tu trouveras dedans</h2>
+    <p class="sub">Un guide interactif que tu lis dans ton navigateur, sur ordi comme sur mobile.</p>
+    <div class="grid">
+      <div class="card"><div class="t"><span class="d"></span>La méthode du prompt parfait</div><div class="x">Le cadre C.L.A.I.R. pour obtenir des résultats utilisables du premier coup.</div></div>
+      <div class="card"><div class="t"><span class="d"></span>Reprendre le contrôle des emails</div><div class="x">Rédiger, résumer et répondre en quelques secondes.</div></div>
+      <div class="card"><div class="t"><span class="d"></span>Automatiser l'administratif</div><div class="x">Transformer le chaos en plans d'action clairs.</div></div>
+      <div class="card"><div class="t"><span class="d"></span>Créer du contenu sans page blanche</div><div class="x">Un seul contenu décliné en plusieurs formats.</div></div>
+      <div class="card"><div class="t"><span class="d"></span>7 routines prêtes à l'emploi</div><div class="x">À mettre en place dès cette semaine.</div></div>
+      <div class="card"><div class="t"><span class="d"></span>12 prompts à copier-coller</div><div class="x">Un clic, c'est dans ton presse-papier.</div></div>
+    </div>
+  </section>
+
+  <div class="final">
+    <h2>Prêt à récupérer ton temps ?</h2>
+    <p class="sub">Accès immédiat après paiement, à vie.</p>
+    <button class="cta" id="buy2">Débloquer l'accès → <span id="price2">19 €</span></button>
+  </div>
+
+  <footer>L'IA au quotidien · Paiement sécurisé par Stripe · [ Ton nom / ta marque ]</footer>
+</div>
+
+<script>
+  async function checkout(btn){
+    const err=document.getElementById('err');err.textContent='';
+    btn.disabled=true;const old=btn.textContent;btn.textContent='Redirection…';
+    try{
+      const r=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'}});
+      const data=await r.json();
+      if(data.url){window.location.href=data.url;}
+      else{throw new Error(data.error||'Erreur inconnue');}
+    }catch(e){
+      err.textContent='Impossible de lancer le paiement : '+e.message;
+      btn.disabled=false;btn.textContent=old;
+    }
+  }
+  document.getElementById('buy').addEventListener('click',function(){checkout(this);});
+  document.getElementById('buy2').addEventListener('click',function(){checkout(this);});
+</script>
+</body>
+</html>

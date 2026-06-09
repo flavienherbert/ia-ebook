@@ -1,0 +1,9 @@
+{
+  "name": "ia-au-quotidien-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vente de l'ebook interactif L'IA au quotidien, accès protégé par Stripe.",
+  "dependencies": {
+    "stripe": "^16.12.0"
+  }
+}

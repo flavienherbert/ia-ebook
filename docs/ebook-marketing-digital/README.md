@@ -30,6 +30,22 @@ cat 00-couverture-preface-intro.md 01-partie1.md 02-partie2.md 03-partie3.md \
     08-bonus-checklist-plan-glossaire.md > ../ebook-marketing-digital.md
 ```
 
+## Version HTML illustrée (lecture en couleur)
+
+- **`../ebook-marketing-digital-reader.html`** — Version mise en page du livre : sommaire cliquable, couleurs par partie, encadrés (conseils, erreurs à éviter, à retenir, études de cas), tableaux stylés, checklist cochable, thème clair/sombre.
+- `../reader-build/` — Scripts générant ce fichier à partir du Markdown : `convert.py` (parse le Markdown en HTML structuré), `style.css`, `script.js`, `assemble.py` (assemble le tout).
+
+### Régénérer la version HTML
+
+Après une modification du Markdown source :
+
+```bash
+cd docs/reader-build
+python3 convert.py     # relit ../ebook-marketing-digital.md -> body.html + toc.json
+python3 assemble.py    # combine body.html + toc.json + style.css + script.js -> final.html
+cp final.html ../ebook-marketing-digital-reader.html
+```
+
 ## Note
 
 Ce contenu est livré indépendamment de la boutique Stripe existante dans ce dépôt (qui vend actuellement l'ebook « L'IA au quotidien »). Aucun fichier de la boutique (`ebook-content.json`, `public/`, `api/`) n'a été modifié.

@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+/* Enables the `dark:` variant driven by a `.dark` class on <html>, set by next-themes */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0f;
+  --surface: #f6f7fb;
+  --surface-2: #eef0f7;
+  --border-color: #e5e7f0;
+  --muted: #5b5f70;
+
+  --electric: #2e6bff;
+  --electric-2: #5b8bff;
+  --violet: #7c3aed;
+  --violet-2: #a878f5;
+
+  --gradient-brand: linear-gradient(120deg, var(--electric) 0%, var(--violet) 100%);
+  --gradient-radial: radial-gradient(60% 60% at 50% 0%, rgba(46, 107, 255, 0.16), transparent 70%);
+
+  --shadow-soft: 0 1px 2px rgba(10, 10, 15, 0.04), 0 8px 24px rgba(10, 10, 15, 0.06);
+  --shadow-lifted: 0 20px 60px -20px rgba(46, 27, 130, 0.25);
+}
+
+.dark {
+  --background: #06060a;
+  --foreground: #f3f4f9;
+  --surface: #0c0d14;
+  --surface-2: #12131c;
+  --border-color: #1f2130;
+  --muted: #9497aa;
+
+  --electric: #4d8bff;
+  --electric-2: #6fa2ff;
+  --violet: #9a63ff;
+  --violet-2: #b98cff;
+
+  --gradient-radial: radial-gradient(60% 60% at 50% 0%, rgba(77, 139, 255, 0.18), transparent 70%);
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lifted: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border-color);
+  --color-muted: var(--muted);
+  --color-electric: var(--electric);
+  --color-electric-2: var(--electric-2);
+  --color-violet: var(--violet);
+  --color-violet-2: var(--violet-2);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.6s ease both;
+  --animate-marquee: marquee 32s linear infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+* {
+  border-color: var(--border-color);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--violet);
+  color: #ffffff;
+}
+
+/* Visible, high-contrast focus ring for keyboard navigation (a11y) */
+:focus-visible {
+  outline: 2px solid var(--electric);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  background: var(--electric);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.text-gradient {
+  background-image: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--border-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.glass {
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Slim top loading/progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--gradient-brand);
+  z-index: 200;
+  transform-origin: left;
+}

@@ -4,7 +4,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Alexandre Moreau",
     role: "Fondateur & Directeur de création",
-    bio: "15 ans d'expérience en design digital. Alexandre a fondé Nova Digital Studio avec une conviction : le design premium doit être accessible aux entreprises ambitieuses, pas réservé aux grands comptes.",
+    bio: "15 ans d'expérience en design digital. Alexandre a fondé Klarim avec une conviction : le design premium doit être accessible aux entreprises ambitieuses, pas réservé aux grands comptes.",
     initials: "AM",
     gradient: { from: "#2e6bff", to: "#7c3aed" },
   },

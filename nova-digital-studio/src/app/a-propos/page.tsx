@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
-import { Target, Eye, ShieldCheck, Sparkles, HeartHandshake, Zap } from "lucide-react";
+import {
+  Target,
+  Eye,
+  ShieldCheck,
+  Sparkles,
+  HeartHandshake,
+  Zap,
+  Users,
+  Award,
+  AlertCircle,
+  Compass,
+} from "lucide-react";
 import { Section, Eyebrow } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { PlaceholderArt } from "@/components/ui/PlaceholderArt";
@@ -11,19 +22,19 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "À propos",
   description:
-    "Découvrez la mission, la vision, les valeurs et l'équipe de Nova Digital Studio, l'agence digitale qui transforme la présence en ligne des entreprises ambitieuses.",
+    "Découvrez la mission, la vision, les valeurs et l'équipe de Klarim, l'agence digitale qui transforme la présence en ligne des entreprises ambitieuses.",
   path: "/a-propos",
 });
 
 const values = [
   {
-    icon: ShieldCheck,
-    title: "Transparence",
-    description: "Des reportings clairs et des résultats mesurés, sans jargon ni promesses vagues.",
+    icon: Compass,
+    title: "Clarté",
+    description: "Des stratégies simples à comprendre, des reportings lisibles, sans jargon ni zones d'ombre.",
   },
   {
-    icon: Sparkles,
-    title: "Exigence créative",
+    icon: ShieldCheck,
+    title: "Exigence",
     description: "Nous ne livrons jamais un travail générique : chaque projet mérite une attention sur mesure.",
   },
   {
@@ -33,9 +44,29 @@ const values = [
   },
   {
     icon: Zap,
-    title: "Impact mesurable",
-    description: "Chaque action que nous menons est reliée à un objectif business concret.",
+    title: "Résultats",
+    description: "Chaque action que nous menons est reliée à un objectif business concret et mesuré.",
   },
+];
+
+const idealClientPoints = [
+  "Dirigeants de TPE/PME qui veulent professionnaliser leur présence digitale sans y sacrifier leur temps",
+  "Indépendants et professions libérales qui veulent une image à la hauteur de leur expertise",
+  "Entreprises en croissance qui ont dépassé le stade du \"système D\" digital et veulent structurer leur stratégie",
+];
+
+const painPoints = [
+  "Un site qui ne génère aucune demande de devis malgré du trafic",
+  "Une visibilité en ligne quasi inexistante face à des concurrents mieux référencés",
+  "Un budget publicitaire dépensé sans visibilité claire sur son retour",
+  "Un manque de temps ou de compétences en interne pour piloter le digital sereinement",
+];
+
+const competitiveAdvantages = [
+  "Une équipe pluridisciplinaire intégrée (design, technique, SEO, publicité, IA) sous un même toit",
+  "Un reporting transparent et compréhensible, sans jargon ni indicateurs de vanité",
+  "Une méthodologie éprouvée, documentée et appliquée à chaque projet",
+  "Un interlocuteur unique qui connaît votre dossier de bout en bout",
 ];
 
 const timeline = [
@@ -43,7 +74,7 @@ const timeline = [
     year: "2018",
     title: "Naissance de l'agence",
     description:
-      "Alexandre Moreau fonde Nova Digital Studio à Paris avec une mission claire : rendre le design digital premium accessible aux PME ambitieuses.",
+      "Alexandre Moreau fonde Klarim à Paris avec une mission claire : rendre le design digital premium accessible aux PME ambitieuses.",
   },
   {
     year: "2020",
@@ -55,7 +86,7 @@ const timeline = [
     year: "2022",
     title: "Cap des 100 projets",
     description:
-      "Nova Digital Studio franchit les 100 projets livrés et constitue une équipe pluridisciplinaire de 12 experts.",
+      "Klarim franchit les 100 projets livrés et constitue une équipe pluridisciplinaire de 12 experts.",
   },
   {
     year: "2024",
@@ -82,7 +113,7 @@ export default function AboutPage() {
               Une agence digitale née d&apos;une conviction simple.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted">
-              Nova Digital Studio a été fondée avec l&apos;idée que chaque entreprise, quelle que
+              Klarim a été fondée avec l&apos;idée que chaque entreprise, quelle que
               soit sa taille, mérite une présence en ligne à la hauteur de son savoir-faire. Depuis
               2018, nous accompagnons des marques ambitieuses dans la construction d&apos;un
               écosystème digital cohérent, performant et durable.
@@ -90,7 +121,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <PlaceholderArt
-              label="Équipe de Nova Digital Studio au travail dans ses locaux parisiens"
+              label="Équipe de Klarim au travail dans ses locaux parisiens"
               className="aspect-[4/3] w-full shadow-lifted"
             />
           </Reveal>
@@ -108,17 +139,17 @@ export default function AboutPage() {
             <Target className="size-8 text-electric" aria-hidden="true" />
             <h2 className="mt-5 text-2xl font-semibold tracking-tight">Notre mission</h2>
             <p className="mt-3 leading-relaxed text-muted">
-              Donner à chaque entreprise les outils digitaux et la stratégie nécessaires pour
-              convertir sa visibilité en ligne en croissance réelle et mesurable, sans jargon ni
-              complexité inutile.
+              Donner à chaque entreprise une stratégie digitale claire et une exécution sans
+              friction, pour transformer sa visibilité en ligne en clients réels et en croissance
+              mesurable.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="rounded-2xl border border-border bg-surface p-8">
             <Eye className="size-8 text-violet" aria-hidden="true" />
             <h2 className="mt-5 text-2xl font-semibold tracking-tight">Notre vision</h2>
             <p className="mt-3 leading-relaxed text-muted">
-              Devenir le partenaire digital de référence des entreprises qui refusent la médiocrité
-              et veulent bâtir une marque forte, soutenue par une exécution technique irréprochable.
+              Devenir la référence des agences qui allient clarté stratégique et excellence
+              d&apos;exécution pour les entreprises ambitieuses qui refusent la médiocrité digitale.
             </p>
           </Reveal>
         </div>
@@ -144,6 +175,64 @@ export default function AboutPage() {
               <p className="mt-2 text-sm leading-relaxed text-muted">{value.description}</p>
             </Reveal>
           ))}
+        </div>
+      </Section>
+
+      {/* Promesse client */}
+      <Section ariaLabelledBy="promise-heading">
+        <Reveal className="mx-auto max-w-3xl rounded-2xl border border-electric/30 bg-gradient-to-br from-electric/10 to-violet/10 p-8 text-center sm:p-10">
+          <Sparkles className="mx-auto size-8 text-electric" aria-hidden="true" />
+          <Eyebrow>Notre promesse</Eyebrow>
+          <h2 id="promise-heading" className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
+            Une stratégie claire, une exécution sans friction, des résultats mesurables.
+          </h2>
+          <p className="mt-4 leading-relaxed text-muted">
+            Dès notre premier échange, vous recevez une feuille de route claire sous 7 jours ouvrés,
+            un interlocuteur unique tout au long du projet, et des résultats mesurés et partagés
+            chaque mois.
+          </p>
+        </Reveal>
+      </Section>
+
+      {/* Pour qui / problématiques / avantages concurrentiels */}
+      <Section className="bg-surface" ariaLabelledBy="positioning-heading">
+        <h2 id="positioning-heading" className="sr-only">
+          Positionnement
+        </h2>
+        <div className="grid gap-8 lg:grid-cols-3">
+          <Reveal className="rounded-2xl border border-border bg-background p-7">
+            <Users className="size-7 text-electric" aria-hidden="true" />
+            <h3 className="mt-4 text-lg font-semibold">Notre client idéal</h3>
+            <ul className="mt-4 space-y-3">
+              {idealClientPoints.map((point) => (
+                <li key={point} className="text-sm leading-relaxed text-muted">
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={0.08} className="rounded-2xl border border-border bg-background p-7">
+            <AlertCircle className="size-7 text-electric" aria-hidden="true" />
+            <h3 className="mt-4 text-lg font-semibold">Les problématiques que nous résolvons</h3>
+            <ul className="mt-4 space-y-3">
+              {painPoints.map((point) => (
+                <li key={point} className="text-sm leading-relaxed text-muted">
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={0.16} className="rounded-2xl border border-border bg-background p-7">
+            <Award className="size-7 text-electric" aria-hidden="true" />
+            <h3 className="mt-4 text-lg font-semibold">Nos avantages concurrentiels</h3>
+            <ul className="mt-4 space-y-3">
+              {competitiveAdvantages.map((point) => (
+                <li key={point} className="text-sm leading-relaxed text-muted">
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </div>
       </Section>
 

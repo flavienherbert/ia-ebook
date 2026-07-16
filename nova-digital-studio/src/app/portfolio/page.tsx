@@ -9,7 +9,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Portfolio",
   description:
-    "Découvrez les projets réalisés par Nova Digital Studio : sites web, branding, SEO, publicité et intelligence artificielle, avec des résultats mesurables à l'appui.",
+    "Découvrez les projets réalisés par Klarim : sites web, branding, SEO, publicité et intelligence artificielle, avec des résultats mesurables à l'appui.",
   path: "/portfolio",
 });
 
@@ -25,6 +25,10 @@ export default function PortfolioPage() {
           <p className="mt-6 text-lg leading-relaxed text-muted">
             Chaque projet que nous menons répond à un objectif business précis. Découvrez comment
             nous avons accompagné ces marques vers des résultats concrets et mesurables.
+          </p>
+          <p className="mt-3 text-xs text-muted">
+            Études de cas modèles présentées à titre d&apos;illustration, à remplacer par vos
+            futures réalisations clients.
           </p>
         </Reveal>
       </Section>

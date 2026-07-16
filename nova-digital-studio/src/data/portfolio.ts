@@ -7,7 +7,7 @@ export const portfolioProjects: PortfolioProject[] = [
     client: "Atelier Oréa",
     sector: "Artisanat & décoration",
     year: "2025",
-    serviceSlug: "creation-sites-web",
+    serviceSlug: "site-vitrine",
     description:
       "Refonte complète du site vitrine et de l'identité visuelle d'un atelier de céramique haut de gamme, avec pour objectif de valoriser le savoir-faire artisanal et de développer les ventes en ligne.",
     objectives: [
@@ -28,7 +28,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     testimonial: {
       quote:
-        "Nova Digital Studio a su traduire notre univers artisanal en une expérience digitale à la hauteur de nos pièces. Le site a transformé notre activité en ligne.",
+        "Klarim a su traduire notre univers artisanal en une expérience digitale à la hauteur de nos pièces. Le site a transformé notre activité en ligne.",
       author: "Camille Rousseau",
       role: "Fondatrice, Atelier Oréa",
     },
@@ -71,7 +71,7 @@ export const portfolioProjects: PortfolioProject[] = [
     client: "Lumina Cosmetics",
     sector: "Beauté & cosmétique",
     year: "2024",
-    serviceSlug: "publicite-meta-google-ads",
+    serviceSlug: "publicite-meta",
     description:
       "Lancement d'une marque de cosmétiques bio avec une stratégie de branding complète et des campagnes publicitaires Meta orientées acquisition et fidélisation.",
     objectives: [
@@ -103,7 +103,7 @@ export const portfolioProjects: PortfolioProject[] = [
     client: "Greenfields Bio",
     sector: "Agroalimentaire",
     year: "2024",
-    serviceSlug: "marketing-digital",
+    serviceSlug: "audit-digital",
     description:
       "Accompagnement marketing digital global pour un producteur bio souhaitant développer ses ventes directes et sa notoriété auprès d'une audience soucieuse d'alimentation responsable.",
     objectives: [
@@ -124,7 +124,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     testimonial: {
       quote:
-        "Nova Digital Studio nous a donné une vraie stratégie, pas juste des prestations isolées. Chaque canal travaille désormais dans la même direction.",
+        "Klarim nous a donné une vraie stratégie, pas juste des prestations isolées. Chaque canal travaille désormais dans la même direction.",
       author: "Marc Delattre",
       role: "Cofondateur, Greenfields Bio",
     },
@@ -135,7 +135,7 @@ export const portfolioProjects: PortfolioProject[] = [
     client: "FitCoach",
     sector: "Sport & bien-être",
     year: "2024",
-    serviceSlug: "intelligence-artificielle",
+    serviceSlug: "automatisation-ia",
     description:
       "Développement d'un assistant IA de coaching sportif personnalisé, intégré à l'application mobile FitCoach pour recommander des programmes adaptés à chaque utilisateur.",
     objectives: [

@@ -13,7 +13,7 @@ export function Footer() {
         <div className="space-y-4">
           <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
             <span className="flex size-8 items-center justify-center rounded-lg bg-gradient-to-br from-electric to-violet text-sm font-bold text-white">
-              N
+              K
             </span>
             {siteConfig.name}
           </Link>

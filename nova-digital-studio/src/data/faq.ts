@@ -2,7 +2,7 @@ import type { FaqItem } from "@/lib/types";
 
 export const generalFaq: FaqItem[] = [
   {
-    question: "Combien coûte un projet avec Nova Digital Studio ?",
+    question: "Combien coûte un projet avec Klarim ?",
     answer:
       "Chaque projet est unique : nos tarifs indicatifs sont détaillés sur chaque page service. Après un premier échange gratuit, nous vous proposons un devis précis adapté à vos objectifs et à votre budget.",
   },

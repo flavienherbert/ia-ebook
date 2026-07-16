@@ -53,7 +53,7 @@ export default async function BlogArticlePage({
     description: post.excerpt,
     datePublished: post.date,
     author: { "@type": "Person", name: post.author.name },
-    publisher: { "@type": "Organization", name: "Nova Digital Studio" },
+    publisher: { "@type": "Organization", name: "Klarim" },
     mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
   };
 

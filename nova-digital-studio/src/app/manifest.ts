@@ -4,7 +4,7 @@ import { siteConfig } from "@/data/nav";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: siteConfig.name,
-    short_name: "Nova Digital",
+    short_name: "Klarim",
     description: siteConfig.tagline,
     start_url: "/",
     display: "standalone",

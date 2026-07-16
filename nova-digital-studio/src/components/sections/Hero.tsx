@@ -26,7 +26,7 @@ export function Hero() {
             <span className="text-gradient">pilotée par la donnée.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Nova Digital Studio conçoit des sites web, des identités de marque et des stratégies
+            Klarim conçoit des sites web, des identités de marque et des stratégies
             marketing qui transforment vos visiteurs en clients. Design premium, exécution rapide,
             résultats mesurables.
           </p>
@@ -64,7 +64,7 @@ export function Hero() {
           className="relative"
         >
           <PlaceholderArt
-            label="Aperçu d'une interface web moderne conçue par Nova Digital Studio"
+            label="Aperçu d'une interface web moderne conçue par Klarim"
             className="aspect-[4/3] w-full shadow-lifted"
           />
           <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-border bg-surface/95 p-4 shadow-soft backdrop-blur sm:block">

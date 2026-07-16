@@ -48,7 +48,13 @@ export interface Service {
   benefits: { title: string; description: string }[];
   methodology: { title: string; description: string }[];
   process: ProcessStep[];
+  /** Ce que le client reçoit concrètement à l'issue de la prestation. */
+  deliverables: string[];
+  /** Délai indicatif de réalisation, ex. "3 à 5 semaines" ou "en continu, dès le 1er mois". */
+  timeline: string;
   pricing: PricingTier[];
+  /** Options et services complémentaires proposés en plus de l'offre de base. */
+  addOns: string[];
   faq: FaqItem[];
   relatedProjectSlugs: string[];
 }

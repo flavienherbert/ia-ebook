@@ -55,7 +55,7 @@ export function Header() {
           aria-label={`${siteConfig.name} — retour à l'accueil`}
         >
           <span className="flex size-8 items-center justify-center rounded-lg bg-gradient-to-br from-electric to-violet text-sm font-bold text-white">
-            N
+            K
           </span>
           <span className="hidden sm:inline">{siteConfig.name}</span>
         </Link>

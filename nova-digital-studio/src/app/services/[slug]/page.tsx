@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, Clock, PackageCheck, Plus } from "lucide-react";
 import { Section, Eyebrow } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
@@ -54,7 +54,7 @@ export default async function ServiceDetailPage({
     "@type": "Service",
     name: service.name,
     description: service.heroDescription,
-    provider: { "@type": "Organization", name: "Nova Digital Studio" },
+    provider: { "@type": "Organization", name: "Klarim" },
     areaServed: "FR",
     url: `${siteUrl}/services/${service.slug}`,
   };
@@ -152,8 +152,42 @@ export default async function ServiceDetailPage({
         </div>
       </Section>
 
+      {/* Livrables & délais */}
+      <Section ariaLabelledBy="deliverables-heading">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <Reveal>
+            <div className="flex items-center gap-2">
+              <PackageCheck className="size-5 text-electric" aria-hidden="true" />
+              <Eyebrow>Livrables</Eyebrow>
+            </div>
+            <h2 id="deliverables-heading" className="mt-4 text-2xl font-semibold tracking-tight">
+              Ce que vous recevez concrètement.
+            </h2>
+            <ul className="mt-6 space-y-3">
+              {service.deliverables.map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm">
+                  <Check className="mt-0.5 size-4 shrink-0 text-electric" aria-hidden="true" />
+                  <span className="text-muted">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={0.08} className="rounded-2xl border border-border bg-surface p-8">
+            <div className="flex items-center gap-2">
+              <Clock className="size-5 text-electric" aria-hidden="true" />
+              <Eyebrow>Délai indicatif</Eyebrow>
+            </div>
+            <p className="mt-4 text-lg font-medium text-foreground">{service.timeline}</p>
+            <p className="mt-3 text-sm text-muted">
+              Le délai final dépend du périmètre exact de votre projet et de la réactivité des
+              validations à chaque étape.
+            </p>
+          </Reveal>
+        </div>
+      </Section>
+
       {/* Tarifs indicatifs */}
-      <Section ariaLabelledBy="pricing-heading">
+      <Section className="bg-surface" ariaLabelledBy="pricing-heading">
         <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow>Tarifs indicatifs</Eyebrow>
           <h2 id="pricing-heading" className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -197,6 +231,30 @@ export default async function ServiceDetailPage({
             </Reveal>
           ))}
         </div>
+      </Section>
+
+      {/* Options complémentaires */}
+      <Section ariaLabelledBy="addons-heading">
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <div className="flex items-center justify-center gap-2">
+            <Plus className="size-5 text-electric" aria-hidden="true" />
+            <Eyebrow>Options complémentaires</Eyebrow>
+          </div>
+          <h2 id="addons-heading" className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Complétez votre offre selon vos besoins.
+          </h2>
+        </Reveal>
+        <ul className="mx-auto mt-10 grid max-w-3xl gap-3 sm:grid-cols-2">
+          {service.addOns.map((addOn) => (
+            <li
+              key={addOn}
+              className="flex items-start gap-2 rounded-xl border border-border bg-surface p-4 text-sm"
+            >
+              <Plus className="mt-0.5 size-4 shrink-0 text-electric" aria-hidden="true" />
+              <span className="text-muted">{addOn}</span>
+            </li>
+          ))}
+        </ul>
       </Section>
 
       {/* Réalisations liées */}

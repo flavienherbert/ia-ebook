@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Blog",
   description:
-    "Conseils, analyses et tendances sur le SEO, le marketing digital, l'intelligence artificielle et la création de sites web, par les experts de Nova Digital Studio.",
+    "Conseils, analyses et tendances sur le SEO, le marketing digital, l'intelligence artificielle et la création de sites web, par les experts de Klarim.",
   path: "/blog",
 });
 

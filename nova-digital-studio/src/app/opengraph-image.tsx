@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/data/nav";
 
-export const alt = "Nova Digital Studio — Agence digitale premium";
+export const alt = "Klarim — Agence digitale premium";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -43,17 +43,17 @@ export default async function Image() {
               fontWeight: 700,
             }}
           >
-            N
+            K
           </div>
           <span style={{ color: "white", fontSize: 32, fontWeight: 600 }}>
             {siteConfig.name}
           </span>
         </div>
         <div style={{ display: "flex", fontSize: 60, fontWeight: 700, color: "white", maxWidth: 900, lineHeight: 1.15 }}>
-          Votre croissance digitale, pilotée par la donnée.
+          De la clarté stratégique à des résultats mesurables.
         </div>
         <div style={{ display: "flex", marginTop: 28, fontSize: 26, color: "#b6bbcf" }}>
-          Sites web · Branding · SEO · Publicité · IA · Marketing digital
+          Sites web · E-commerce · SEO · Publicité · Branding · Automatisation & IA
         </div>
       </div>
     ),

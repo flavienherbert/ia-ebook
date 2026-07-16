@@ -11,6 +11,7 @@ import { ProjectCard } from "@/components/sections/ProjectCard";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
+import { Guarantees } from "@/components/sections/Guarantees";
 import { services } from "@/data/services";
 import { portfolioProjects } from "@/data/portfolio";
 import { testimonials } from "@/data/testimonials";
@@ -20,9 +21,9 @@ import { generalFaq } from "@/data/faq";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Nova Digital Studio — Agence digitale premium à Paris",
+  title: "Klarim — Agence digitale premium à Paris",
   description:
-    "Sites web, branding, SEO, publicité Meta & Google Ads, marketing digital, automatisation et IA : Nova Digital Studio transforme votre présence en ligne en croissance mesurable.",
+    "Sites web, branding, SEO, publicité Meta & Google Ads, marketing digital, automatisation et IA : Klarim transforme votre présence en ligne en croissance mesurable.",
   path: "/",
 });
 
@@ -37,12 +38,12 @@ export default function HomePage() {
           <Reveal>
             <Eyebrow>Notre agence</Eyebrow>
             <h2 id="presentation-heading" className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Une agence à taille humaine, une exigence de grand groupe.
+              De la clarté stratégique à l&apos;exécution, sans jargon ni détour.
             </h2>
           </Reveal>
           <Reveal delay={0.1} className="space-y-4 text-muted">
             <p>
-              Depuis 8 ans, Nova Digital Studio accompagne des entreprises ambitieuses dans la
+              Depuis 8 ans, Klarim accompagne des entreprises ambitieuses dans la
               construction de leur présence en ligne. Notre équipe pluridisciplinaire réunit
               designers, développeurs, experts SEO, traffic managers et spécialistes IA autour
               d&apos;un objectif commun : transformer votre digital en véritable moteur de croissance.
@@ -108,6 +109,9 @@ export default function HomePage() {
             <h2 id="portfolio-heading" className="mt-4 max-w-xl text-3xl font-semibold tracking-tight sm:text-4xl">
               Des résultats concrets pour des marques ambitieuses.
             </h2>
+            <p className="mt-2 text-xs text-muted">
+              Études de cas modèles, à remplacer par vos futures réalisations clients.
+            </p>
           </Reveal>
           <Button href="/portfolio" variant="secondary">
             Voir le portfolio complet
@@ -130,6 +134,9 @@ export default function HomePage() {
           <h2 id="testimonials-heading" className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
             Ils nous ont fait confiance.
           </h2>
+          <p className="mt-2 text-xs text-muted">
+            Exemples de témoignages, à remplacer par les avis de vos propres clients.
+          </p>
         </Reveal>
         <div className="mt-14">
           <Testimonials testimonials={testimonials} />
@@ -146,6 +153,19 @@ export default function HomePage() {
         </Reveal>
         <div className="mt-14">
           <ProcessSteps steps={collaborationSteps} />
+        </div>
+      </Section>
+
+      {/* Nos garanties */}
+      <Section ariaLabelledBy="guarantees-heading">
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Nos garanties</Eyebrow>
+          <h2 id="guarantees-heading" className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Vous savez toujours à quoi vous attendre.
+          </h2>
+        </Reveal>
+        <div className="mt-14">
+          <Guarantees />
         </div>
       </Section>
 

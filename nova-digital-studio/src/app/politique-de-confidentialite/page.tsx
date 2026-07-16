@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
-import { LegalDisclaimer } from "@/components/sections/LegalDisclaimer";
 import { siteConfig } from "@/data/nav";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Politique de confidentialité",
-  description:
-    "Politique de confidentialité fictive du site Nova Digital Studio, à titre d'exemple, conforme aux principes du RGPD.",
+  description: "Politique de confidentialité du site Klarim, conforme aux principes du RGPD.",
   path: "/politique-de-confidentialite",
 });
 
@@ -20,16 +18,13 @@ export default function PrivacyPolicyPage() {
           <p className="mt-4 text-sm text-muted">Dernière mise à jour : 15 juillet 2026</p>
         </div>
 
-        <LegalDisclaimer />
-
         <div className="space-y-8 text-sm leading-relaxed text-muted">
           <section>
             <h2 className="text-xl font-semibold text-foreground">1. Données collectées</h2>
             <p className="mt-3">
               Dans le cadre de l&apos;utilisation de ce site, nous collectons les données que vous
               nous transmettez volontairement via nos formulaires : nom, adresse email, entreprise,
-              message et, le cas échéant, budget indicatif. Ce site étant une démonstration, aucune
-              donnée réelle n&apos;est traitée à des fins commerciales.
+              message et, le cas échéant, budget indicatif.
             </p>
           </section>
 

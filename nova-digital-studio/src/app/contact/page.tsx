@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { Section, Eyebrow } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { BookingCta } from "@/components/sections/BookingCta";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { siteConfig } from "@/data/nav";
 import { generalFaq } from "@/data/faq";
@@ -11,7 +12,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
   description:
-    "Contactez Nova Digital Studio pour discuter de votre projet digital : site web, branding, SEO, publicité, marketing digital ou intelligence artificielle.",
+    "Contactez Klarim pour discuter de votre projet digital : site web, branding, SEO, publicité, marketing digital ou intelligence artificielle.",
   path: "/contact",
 });
 
@@ -32,6 +33,9 @@ export default function ContactPage() {
       </Section>
 
       <Section className="pt-0">
+        <Reveal className="mx-auto mb-14 max-w-xl">
+          <BookingCta />
+        </Reveal>
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal className="rounded-2xl border border-border bg-surface p-8 sm:p-10">
             <ContactForm />
@@ -78,10 +82,11 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            {/* Carte stylisée (illustration, adresse fictive) */}
+            {/* Repère de localisation stylisé. Remplacez par un embed Google Maps/OpenStreetMap
+                si vous préférez une carte interactive une fois votre adresse définitive connue. */}
             <div
               role="img"
-              aria-label={`Localisation illustrative de nos bureaux : ${siteConfig.address}`}
+              aria-label={`Localisation de nos bureaux : ${siteConfig.address}`}
               className="relative h-56 overflow-hidden rounded-2xl border border-border bg-surface bg-grid"
             >
               <div className="absolute inset-0" style={{ backgroundImage: "var(--gradient-radial)" }} />

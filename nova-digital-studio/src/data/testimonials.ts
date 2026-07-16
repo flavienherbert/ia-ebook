@@ -3,7 +3,7 @@ import type { Testimonial } from "@/lib/types";
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Nova Digital Studio a su traduire notre univers artisanal en une expérience digitale à la hauteur de nos pièces. Le site a transformé notre activité en ligne.",
+      "Klarim a su traduire notre univers artisanal en une expérience digitale à la hauteur de nos pièces. Le site a transformé notre activité en ligne.",
     author: "Camille Rousseau",
     role: "Fondatrice",
     company: "Atelier Oréa",
@@ -30,7 +30,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Nova Digital Studio nous a donné une vraie stratégie, pas juste des prestations isolées. Chaque canal travaille désormais dans la même direction.",
+      "Klarim nous a donné une vraie stratégie, pas juste des prestations isolées. Chaque canal travaille désormais dans la même direction.",
     author: "Marc Delattre",
     role: "Cofondateur",
     company: "Greenfields Bio",

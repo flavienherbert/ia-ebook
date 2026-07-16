@@ -48,7 +48,7 @@ export default async function ProjectDetailPage({
     "@type": "CreativeWork",
     name: project.name,
     description: project.description,
-    creator: { "@type": "Organization", name: "Nova Digital Studio" },
+    creator: { "@type": "Organization", name: "Klarim" },
     url: `${siteUrl}/portfolio/${project.slug}`,
     dateCreated: project.year,
   };
@@ -74,6 +74,9 @@ export default async function ProjectDetailPage({
             </div>
             <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">{project.name}</h1>
             <p className="mt-6 text-lg leading-relaxed text-muted">{project.description}</p>
+            <p className="mt-3 text-xs text-muted">
+              Étude de cas modèle présentée à titre d&apos;illustration.
+            </p>
           </Reveal>
           <Reveal delay={0.1}>
             <PlaceholderArt

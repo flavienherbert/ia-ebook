@@ -1,11 +1,14 @@
 import type { BlogPost } from "@/lib/types";
 
 export const blogCategories = [
+  "Marketing digital",
   "SEO",
   "Intelligence artificielle",
   "Création de sites web",
-  "Marketing digital",
+  "Publicité en ligne",
   "Automatisation",
+  "Réseaux sociaux",
+  "Génération de prospects",
   "Branding",
 ] as const;
 
@@ -185,7 +188,7 @@ export const blogPosts: BlogPost[] = [
     title: "Meta Ads vs Google Ads : quelle plateforme choisir en 2026 ?",
     excerpt:
       "Faut-il investir sur Meta, sur Google, ou sur les deux ? Nous décryptons les forces de chaque plateforme selon votre secteur, votre objectif et votre budget.",
-    category: "Marketing digital",
+    category: "Publicité en ligne",
     tags: ["Publicité en ligne", "Meta Ads", "Google Ads"],
     date: "2026-03-11",
     readingTime: "6 min",
@@ -303,6 +306,94 @@ export const blogPosts: BlogPost[] = [
         heading: "Un investissement qui se rentabilise sur la durée",
         body: [
           "Contrairement à une campagne publicitaire dont l'effet s'arrête avec le budget, une identité de marque bien construite continue de produire de la valeur des années après sa création. C'est cette dimension de long terme qui en fait l'un des investissements marketing les plus rentables pour une entreprise en croissance.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "reseaux-sociaux-presence-qui-convertit",
+    title: "Réseaux sociaux : construire une présence qui convertit vraiment",
+    excerpt:
+      "Publier régulièrement ne suffit pas à générer des clients. Voici comment structurer une présence sociale qui construit une vraie audience et transforme les abonnés en prospects.",
+    category: "Réseaux sociaux",
+    tags: ["Réseaux sociaux", "Community management", "Contenu"],
+    date: "2026-06-22",
+    readingTime: "7 min",
+    author: { name: "Hugo Simon", role: "Traffic Manager", initials: "HS" },
+    cover: { from: "#7c3aed", to: "#2e6bff" },
+    content: [
+      {
+        heading: "Publier ne suffit plus",
+        body: [
+          "Pendant longtemps, être présent sur les réseaux sociaux se résumait à publier régulièrement. Cette approche ne suffit plus : les algorithmes favorisent le contenu qui génère de vraies interactions, et les utilisateurs sont sursollicités par des marques qui publient sans réelle intention. La question n'est plus « à quelle fréquence publier », mais « quelle valeur chaque publication apporte-t-elle ? ».",
+        ],
+      },
+      {
+        heading: "Choisir les bonnes plateformes plutôt que d'être partout",
+        body: [
+          "Chaque réseau social a sa propre culture et son propre format dominant. Une entreprise B2B tirera davantage de valeur d'une présence soignée sur LinkedIn qu'un flux dispersé sur cinq plateformes différentes. Mieux vaut une présence maîtrisée sur deux réseaux pertinents pour votre audience qu'une présence diluée partout à la fois.",
+        ],
+      },
+      {
+        heading: "Construire des piliers de contenu cohérents",
+        body: [
+          "Une présence sociale efficace repose sur quelques piliers de contenu récurrents : expertise métier, coulisses de l'entreprise, preuve sociale (avis, résultats clients), et contenu d'engagement direct (questions, sondages). Cette structure évite l'improvisation permanente et donne une identité reconnaissable à votre communication.",
+        ],
+      },
+      {
+        heading: "L'engagement se construit dans les deux sens",
+        body: [
+          "Répondre aux commentaires, engager la conversation avec d'autres comptes de votre secteur, et interagir authentiquement avec votre communauté pèse souvent plus lourd dans les algorithmes — et dans la perception de votre marque — que le contenu publié lui-même. Une marque qui n'interagit qu'en publication descendante paraît distante, quel que soit le soin apporté à ses visuels.",
+        ],
+      },
+      {
+        heading: "Mesurer ce qui compte vraiment",
+        body: [
+          "Le nombre d'abonnés est un indicateur de vanité si l'audience ne se convertit jamais. Il est plus utile de suivre le taux d'engagement réel, le trafic généré vers le site, et surtout le nombre de prises de contact issues des réseaux sociaux — les indicateurs qui relient directement l'activité sociale aux résultats business.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "generation-prospects-remplir-pipeline",
+    title: "Génération de prospects : la méthode pour remplir votre pipeline commercial",
+    excerpt:
+      "Attirer du trafic ne suffit pas si ce trafic ne se transforme jamais en prospects qualifiés. Voici une méthode concrète pour construire un système de génération de leads durable.",
+    category: "Génération de prospects",
+    tags: ["Génération de leads", "Conversion", "Marketing digital"],
+    date: "2026-05-05",
+    readingTime: "8 min",
+    author: { name: "Nora Bakir", role: "Cheffe de projet & Automatisation", initials: "NB" },
+    cover: { from: "#2e6bff", to: "#7c3aed" },
+    content: [
+      {
+        heading: "Le trafic n'est pas l'objectif final",
+        body: [
+          "Beaucoup d'entreprises concentrent leurs efforts sur l'augmentation du trafic, en oubliant que ce trafic n'a de valeur que s'il se transforme en prospects identifiables. Un site qui reçoit 10 000 visites par mois sans aucun formulaire de contact rempli génère, en réalité, zéro opportunité commerciale.",
+        ],
+      },
+      {
+        heading: "Créer des points d'entrée à chaque étape du parcours",
+        body: [
+          "Tous les visiteurs ne sont pas prêts à demander un devis immédiatement. Proposer plusieurs points d'entrée — guide téléchargeable, audit gratuit, newsletter, appel découverte — permet de capter des contacts à différents niveaux de maturité, plutôt que de ne s'adresser qu'aux visiteurs déjà prêts à acheter.",
+        ],
+      },
+      {
+        heading: "Qualifier avant de solliciter l'équipe commerciale",
+        body: [
+          "Tous les prospects ne se valent pas. Un système de qualification simple (secteur, budget, urgence du projet) permet de prioriser les prospects les plus prometteurs et d'éviter de faire perdre du temps à l'équipe commerciale sur des contacts peu qualifiés.",
+        ],
+      },
+      {
+        heading: "Nourrir les prospects qui ne sont pas encore prêts",
+        body: [
+          "Un prospect qui télécharge un guide n'est pas nécessairement prêt à signer. Une séquence d'emails de nurturing, qui apporte une valeur réelle avant toute sollicitation commerciale, permet de rester présent dans l'esprit du prospect jusqu'au moment où il devient prêt à passer à l'action.",
+        ],
+      },
+      {
+        heading: "Aligner marketing et commercial sur la définition d'un bon prospect",
+        body: [
+          "Un désalignement fréquent : l'équipe marketing considère qu'un lead est qualifié dès qu'il remplit un formulaire, tandis que l'équipe commerciale attend un contact bien plus mature avant d'investir du temps. Définir ensemble ce qu'est un « prospect qualifié » évite les frictions et améliore le taux de transformation global du pipeline.",
         ],
       },
     ],

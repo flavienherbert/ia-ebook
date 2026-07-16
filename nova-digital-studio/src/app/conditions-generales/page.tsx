@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
-import { LegalDisclaimer } from "@/components/sections/LegalDisclaimer";
 import { siteConfig } from "@/data/nav";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Conditions générales",
-  description:
-    "Conditions générales de vente et d'utilisation fictives du site Nova Digital Studio, à titre d'exemple.",
+  description: "Conditions générales de vente et d'utilisation du site Klarim.",
   path: "/conditions-generales",
 });
 
@@ -20,17 +18,15 @@ export default function TermsPage() {
           <p className="mt-4 text-sm text-muted">Dernière mise à jour : 15 juillet 2026</p>
         </div>
 
-        <LegalDisclaimer />
-
         <div className="space-y-8 text-sm leading-relaxed text-muted">
           <section>
             <h2 className="text-xl font-semibold text-foreground">1. Objet</h2>
             <p className="mt-3">
               Les présentes conditions générales de vente et d&apos;utilisation (« CGV/CGU »)
-              régissent, à titre d&apos;exemple, la relation entre {siteConfig.name} et toute
-              personne (« le Client ») souhaitant faire appel à ses services de création de site
-              web, branding, SEO, publicité digitale, marketing digital, automatisation,
-              intelligence artificielle, création de contenu ou community management.
+              régissent la relation entre {siteConfig.name} et toute personne (« le Client »)
+              souhaitant faire appel à ses services de création de site web, e-commerce, SEO,
+              publicité digitale, branding, automatisation et intelligence artificielle, création
+              de contenu, community management, maintenance ou audit digital.
             </p>
           </section>
 

@@ -7,6 +7,9 @@ export const site = {
     "Guides pratiques pour créer, lancer et vendre avec l'IA, sans savoir coder.",
   baseline: "Construis avec l'IA. Ce soir.",
   shopUrl: "https://ebookclaude.vercel.app",
+  // Chemin vers une image 4K (ex: "/background.jpg"). Laisse vide pour
+  // garder le dégradé animé façon aurore.
+  backgroundImage: "",
 };
 
 export type Livre = {
@@ -60,13 +63,14 @@ export type Stat = {
   suffix: string;
   label: string;
   isText?: boolean;
+  textValue?: string;
 };
 
 export const stats: Stat[] = [
   { value: 3, suffix: "", label: "Guides" },
   { value: 300, suffix: "+", label: "Pages" },
   { value: 120, suffix: "+", label: "Prompts" },
-  { value: 0, suffix: "", label: "Livraison immédiate", isText: true },
+  { value: 0, suffix: "", label: "Livraison", isText: true, textValue: "Immédiate" },
 ];
 
 export const construction = [

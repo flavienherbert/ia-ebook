@@ -21,12 +21,13 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
       return;
     }
 
-    const duration = 1400;
+    const duration = 1500;
     const start = performance.now();
+    const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
     let raf: number;
     function tick(now: number) {
       const progress = Math.min(1, (now - start) / duration);
-      setDisplay(Math.floor(progress * value));
+      setDisplay(Math.floor(easeOutCubic(progress) * value));
       if (progress < 1) raf = requestAnimationFrame(tick);
     }
     raf = requestAnimationFrame(tick);
@@ -55,7 +56,7 @@ export default function Stats() {
         >
           <p className="font-display text-4xl text-gold md:text-6xl">
             {stat.isText ? (
-              "Immédiate"
+              stat.textValue
             ) : (
               <Counter value={stat.value} suffix={stat.suffix} />
             )}

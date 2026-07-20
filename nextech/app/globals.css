@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: #0a0a0a;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #f5f1ea;
+  overscroll-behavior: none;
+}
+
+/* Petits labels en majuscules, interlettrage large */
+.label {
+  @apply font-sans text-xs uppercase tracking-[0.25em] text-muted;
+}
+
+/* Ligne masquée pour la révélation du manifeste */
+.reveal-mask {
+  overflow: hidden;
+  display: block;
+}
+
+::selection {
+  background-color: #c8a15a;
+  color: #0a0a0a;
+}
+
+/* Barre de défilement discrète */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+}

@@ -7,14 +7,14 @@ html {
 }
 
 body {
-  background-color: #0a0a0a;
+  /* Pas de fond opaque ici : le fond animé (<Background />) doit rester visible. */
   color: #f5f1ea;
   overscroll-behavior: none;
 }
 
 /* Petits labels en majuscules, interlettrage large */
 .label {
-  @apply font-sans text-xs uppercase tracking-[0.25em] text-muted;
+  @apply font-sans text-label uppercase text-muted;
 }
 
 /* Ligne masquée pour la révélation du manifeste */

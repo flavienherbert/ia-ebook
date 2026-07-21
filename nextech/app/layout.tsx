@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { site } from "@/config";
-import Grain from "@/components/Grain";
-import CinematicBackground from "@/components/CinematicBackground";
+import Background from "@/components/Background";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 
 const fraunces = Fraunces({
@@ -33,12 +32,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`${fraunces.variable} ${inter.variable}`}>
-      <body className="bg-background font-sans antialiased">
-        <CinematicBackground />
+      <body className="font-sans antialiased">
+        <Background />
         <div className="relative z-10">
           <SmoothScroll>{children}</SmoothScroll>
         </div>
-        <Grain />
       </body>
     </html>
   );

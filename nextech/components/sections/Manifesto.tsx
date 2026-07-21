@@ -17,17 +17,17 @@ export default function Manifesto() {
   return (
     <section
       id="manifeste"
-      className="flex min-h-screen flex-col items-center justify-center px-6 py-24 text-center md:px-12"
+      className="flex min-h-screen flex-col items-center justify-center px-6 py-[clamp(5rem,12vh,9rem)] text-center md:px-12"
     >
       <p className="label mb-10">Le manifeste</p>
-      <div className="max-w-4xl space-y-3 font-display text-3xl leading-tight md:text-6xl">
+      <div className="cine-shadow max-w-3xl space-y-3 font-display text-[clamp(1.75rem,4vw,3rem)] font-medium leading-tight">
         {lines.map((line, i) => (
           <div key={i} className="reveal-mask">
             <motion.p
               initial={{ y: "100%" }}
               whileInView={{ y: 0 }}
-              viewport={{ once: true, margin: "-15%" }}
-              transition={{ duration: 1, delay: i * 0.12, ease: EASE }}
+              viewport={{ once: true, margin: "-12%" }}
+              transition={{ duration: 0.9, delay: i * 0.08, ease: EASE }}
             >
               {line}
             </motion.p>

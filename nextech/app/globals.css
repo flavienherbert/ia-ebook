@@ -8,19 +8,30 @@ html {
 
 body {
   /* Pas de fond opaque ici : le fond animé (<Background />) doit rester visible. */
-  color: #f5f1ea;
+  color: #ede8df;
   overscroll-behavior: none;
 }
 
-/* Petits labels en majuscules, interlettrage large */
-.label {
-  @apply font-sans text-label uppercase text-muted;
-}
+@layer components {
+  /* Petits labels en majuscules, interlettrage large. Placé dans le layer
+     "components" (avant les utilities) pour qu'un text-gold / text-background
+     posé à côté dans une className puisse toujours le surcharger. */
+  .label {
+    @apply font-sans text-label uppercase text-muted;
+  }
 
-/* Ligne masquée pour la révélation du manifeste */
-.reveal-mask {
-  overflow: hidden;
-  display: block;
+  /* Ombre portée sombre pour la lisibilité des gros titres sur la photo de fond */
+  .cine-shadow {
+    text-shadow:
+      0 2px 24px rgba(0, 0, 0, 0.55),
+      0 1px 3px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Ligne masquée pour la révélation du manifeste */
+  .reveal-mask {
+    overflow: hidden;
+    display: block;
+  }
 }
 
 ::selection {

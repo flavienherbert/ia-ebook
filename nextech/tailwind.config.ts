@@ -9,10 +9,10 @@ const config: Config = {
     extend: {
       colors: {
         background: "#0A0A0A",
-        foreground: "#F5F1EA",
-        muted: "#9A958C",
+        foreground: "#EDE8DF",
+        muted: "#B4AEA4",
         gold: "#C8A15A",
-        hairline: "rgba(245,241,234,0.08)",
+        hairline: "rgba(237,232,223,0.08)",
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],

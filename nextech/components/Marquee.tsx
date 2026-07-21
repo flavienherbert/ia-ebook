@@ -26,10 +26,13 @@ export default function Marquee({
         style={{ x }}
         className="flex w-max animate-marquee motion-reduce:animate-none"
       >
-        <span className="pr-8 font-display text-[8vw] leading-none text-foreground">
+        <span className="cine-shadow pr-8 font-display text-[clamp(1.75rem,5vw,3.25rem)] font-medium leading-none text-foreground">
           {content}
         </span>
-        <span className="pr-8 font-display text-[8vw] leading-none text-foreground" aria-hidden>
+        <span
+          className="cine-shadow pr-8 font-display text-[clamp(1.75rem,5vw,3.25rem)] font-medium leading-none text-foreground"
+          aria-hidden
+        >
           {content}
         </span>
       </motion.div>

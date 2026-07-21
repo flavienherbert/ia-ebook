@@ -7,9 +7,10 @@ export const site = {
     "Guides pratiques pour créer, lancer et vendre avec l'IA, sans savoir coder.",
   baseline: "Construis avec l'IA. Ce soir.",
   shopUrl: "https://ebookclaude.vercel.app",
-  // Chemin vers une image 4K (ex: "/background.jpg"). Laisse vide pour
-  // garder le dégradé animé façon aurore.
-  backgroundImage: "",
+  // Chemin vers l'image de fond (ex: "/background.jpg" pour une vraie photo
+  // 4K). Remplace simplement le fichier dans /public pour en changer.
+  // Laisse vide ("") pour revenir au dégradé animé façon aurore.
+  backgroundImage: "/background.svg",
 };
 
 export type Livre = {

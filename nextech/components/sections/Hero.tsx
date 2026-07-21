@@ -89,7 +89,7 @@ export default function Hero() {
       {/* Titre hero — sobre, largeur contenue */}
       <motion.h1
         style={{ y: titleY, opacity }}
-        className="font-display text-hero max-w-3xl font-semibold"
+        className="font-display text-hero cine-shadow max-w-3xl font-semibold"
       >
         {lines.map((line, i) => (
           <AnimatedLine

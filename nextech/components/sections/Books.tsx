@@ -5,6 +5,14 @@ import { livres } from "@/config";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
+// Décalage éditorial en desktop : les cartes alternent gauche/droite sur
+// une grille 12 colonnes. En mobile, tout repasse en pile pleine largeur.
+const OFFSET = [
+  "md:col-start-1 md:col-span-9 lg:col-span-8",
+  "md:col-start-4 md:col-span-9 lg:col-start-5 lg:col-span-8",
+  "md:col-start-1 md:col-span-9 lg:col-span-8",
+];
+
 function BookCard({
   livre,
   index,
@@ -14,43 +22,40 @@ function BookCard({
 }) {
   return (
     <motion.article
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-15%" }}
-      transition={{ duration: 1, delay: index * 0.1, ease: EASE }}
-      className="group relative overflow-hidden border-b border-white/10 py-14 md:py-20"
+      viewport={{ once: true, margin: "-12%" }}
+      transition={{ duration: 0.9, delay: index * 0.08, ease: EASE }}
+      className={`group relative overflow-hidden rounded-2xl border border-hairline bg-white/[0.03] p-6 transition-transform duration-300 hover:-translate-y-1 md:p-10 ${OFFSET[index % OFFSET.length]}`}
     >
       {/* Numéro fantôme */}
-      <span className="pointer-events-none absolute -right-4 top-0 select-none font-display text-[9rem] font-black leading-none text-white/[0.03] md:text-[14rem]">
+      <span className="pointer-events-none absolute -right-2 -top-4 select-none font-display text-[6rem] font-black leading-none text-foreground/[0.04] md:text-[8rem]">
         {livre.num}
       </span>
 
-      {/* Filet or animé */}
-      <motion.span
+      {/* Filet gauche : s'anime en or au hover */}
+      <span
         aria-hidden
-        className="absolute left-0 top-0 h-full w-px bg-gold/40"
-        initial={{ scaleY: 0 }}
-        whileInView={{ scaleY: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.9, delay: index * 0.1 + 0.2, ease: EASE }}
-        style={{ transformOrigin: "top" }}
+        className="absolute left-0 top-0 h-full w-[2px] bg-hairline transition-colors duration-300 group-hover:bg-gold"
       />
 
-      <div className="relative grid gap-6 pl-8 md:grid-cols-[auto_1fr_auto] md:items-center md:gap-12">
+      <div className="relative flex flex-col gap-6">
         <p className="label text-gold">
           {livre.num} · {livre.cat}
         </p>
 
-        <div className="max-w-2xl transition-transform duration-500 ease-out group-hover:translate-x-2">
-          <h3 className="font-display text-2xl leading-snug md:text-4xl">
+        <div className="max-w-2xl">
+          <h3 className="font-display text-book-h3 font-semibold">
             {livre.title}
           </h3>
-          <p className="mt-4 text-muted">{livre.desc}</p>
+          <p className="mt-3 text-base leading-[1.65] text-muted">
+            {livre.desc}
+          </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {livre.tags.map((tag) => (
               <span
                 key={tag}
-                className="label rounded-full border border-white/10 px-3 py-1"
+                className="label rounded-full border border-hairline px-3 py-1"
               >
                 {tag}
               </span>
@@ -58,15 +63,15 @@ function BookCard({
           </div>
         </div>
 
-        <div className="flex flex-row items-center justify-between gap-6 md:flex-col md:items-end">
-          <span className="font-display text-2xl text-foreground">
+        <div className="flex flex-row items-center justify-between gap-6 pt-2 md:flex-col md:items-end">
+          <span className="font-display text-lg text-foreground">
             {livre.price}
           </span>
           <a
             href={livre.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="label flex items-center gap-2 border border-gold/50 px-5 py-3 text-gold transition-colors hover:bg-gold hover:text-background"
+            className="label flex min-h-[44px] items-center gap-2 rounded-full border border-gold/50 px-5 text-gold transition-colors duration-300 hover:bg-gold hover:text-background"
           >
             Obtenir <span aria-hidden>→</span>
           </a>
@@ -78,7 +83,10 @@ function BookCard({
 
 export default function Books() {
   return (
-    <section id="livres" className="px-6 py-24 md:px-12">
+    <section
+      id="livres"
+      className="px-6 py-[clamp(5rem,12vh,9rem)] md:px-12"
+    >
       <motion.p
         className="label mb-14"
         initial={{ opacity: 0 }}
@@ -88,7 +96,7 @@ export default function Books() {
       >
         Les guides — 03
       </motion.p>
-      <div>
+      <div className="flex flex-col gap-8 md:grid md:grid-cols-12">
         {livres.map((livre, i) => (
           <BookCard key={livre.num} livre={livre} index={i} />
         ))}

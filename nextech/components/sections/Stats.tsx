@@ -44,17 +44,17 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <section className="grid grid-cols-2 gap-10 px-6 py-24 md:grid-cols-4 md:px-12">
+    <section className="grid grid-cols-2 gap-10 px-6 py-[clamp(5rem,12vh,9rem)] md:grid-cols-4 md:px-12">
       {stats.map((stat, i) => (
         <motion.div
           key={stat.label}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-15%" }}
+          viewport={{ once: true, margin: "-12%" }}
           transition={{ duration: 0.9, delay: i * 0.08, ease: EASE }}
           className="text-center"
         >
-          <p className="font-display text-4xl text-gold md:text-6xl">
+          <p className="cine-shadow font-display text-stat-num font-semibold text-gold">
             {stat.isText ? (
               stat.textValue
             ) : (

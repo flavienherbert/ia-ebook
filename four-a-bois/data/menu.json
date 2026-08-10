@@ -1,0 +1,238 @@
+{
+  "pizzasTomate": {
+    "titre": "Pizzas base tomate",
+    "tailles": ["Simple", "Super", "Maxi"],
+    "items": [
+      { "nom": "Carnivore", "ingredients": "Tomate, viande hachée, merguez, chorizo, ail persillé, mozzarella, origan", "prix": [13.90, 17.20, 18.90] },
+      { "nom": "Napolitaine", "ingredients": "Tomate, anchois, olives, origan", "prix": [12.60, 14.60, 17.30] },
+      { "nom": "Jambon", "ingredients": "Tomate, jambon, emmental", "prix": [11.90, 13.90, 16.60] },
+      { "nom": "Merguez", "ingredients": "Tomate, merguez, poivrons, emmental", "prix": [13.20, 15.20, 17.90] },
+      { "nom": "Chorizo", "ingredients": "Tomate, chorizo, poivrons, emmental", "prix": [11.90, 13.90, 16.60] },
+      { "nom": "Normande", "ingredients": "Tomate, champignons, crème fraîche, emmental", "prix": [12.60, 14.60, 17.30] },
+      { "nom": "Royale", "ingredients": "Tomate, jambon, champignons, emmental", "prix": [13.20, 15.20, 17.90] },
+      { "nom": "Bolognaise", "ingredients": "Tomate, bolognaise, emmental, mozzarella", "prix": [13.20, 15.20, 17.90] },
+      { "nom": "Lorraine", "ingredients": "Tomate, poitrine fumée, oignons, crème fraîche, emmental", "prix": [13.20, 15.20, 17.90] },
+      { "nom": "Milanaise", "ingredients": "Tomate, poitrine fumée, œuf, mozzarella, olives, emmental", "prix": [13.20, 15.20, 17.90] },
+      { "nom": "4 Fromages", "ingredients": "Tomate, chèvre, roquefort, mozzarella, emmental", "prix": [13.80, 15.80, 18.50] },
+      { "nom": "Vivaldi", "ingredients": "Tomate, jambon, champignons, fonds d'artichauts, poivrons, emmental", "prix": [13.80, 15.80, 18.50] },
+      { "nom": "Campagnarde", "ingredients": "Tomate, jambon, pommes de terre, œuf, emmental", "prix": [13.80, 15.80, 18.50] },
+      { "nom": "Paysanne", "ingredients": "Tomate, lardons, champignons, fonds d'artichauts, pointes d'asperges, emmental", "prix": [13.80, 15.80, 18.50] },
+      { "nom": "Seguin", "ingredients": "Tomate, champignons, jambon, fromage de chèvre, emmental, origan", "prix": [13.80, 15.80, 18.50] },
+      { "nom": "Norvégienne", "ingredients": "Tomate, saumon fumé, crème fraîche, emmental", "prix": [15.20, 17.20, 19.90] },
+      { "nom": "Américaine", "ingredients": "Tomate, viande hachée, champignons, mozzarella, emmental, ail persillé, œuf, crème fraîche, origan", "prix": [13.80, 15.80, 18.50] },
+      { "nom": "Calzone soufflée", "ingredients": "Tomate, jambon, champignons, emmental, œuf, ail persillé", "prixUnique": 14.90, "aConfirmer": true }
+    ]
+  },
+  "pizzasCreme": {
+    "titre": "Pizzas base crème",
+    "tailles": ["Simple", "Super", "Maxi"],
+    "items": [
+      { "nom": "Carbonade", "ingredients": "Crème fraîche, lardons, oignons, œuf miroir, origan", "prix": [13.80, 15.70, 18.50] },
+      { "nom": "Calzone Blanche", "ingredients": "Crème fraîche, jambon, champignons, ail persillé, chèvre, œuf, mozzarella", "prixUnique": 16.90, "aConfirmer": true },
+      { "nom": "Champignons", "ingredients": "Crème fraîche, jambon, champignons, emmental", "prix": [13.20, 15.20, 17.90] },
+      { "nom": "Poulet Chorizo", "ingredients": "Crème fraîche, poulet, chorizo, oignons, poivrons, mozzarella", "prix": [13.80, 15.80, 18.50] },
+      { "nom": "Indienne", "ingredients": "Crème fraîche, poulet curry, oignons rouges, champignons, mozzarella, origan", "prix": [13.80, 15.80, 18.50] },
+      { "nom": "Camembert", "ingredients": "Crème fraîche, camembert, jambon, ail persillé, emmental", "prix": [13.20, 15.70, 18.40] },
+      { "nom": "Chèvre Miel", "ingredients": "Crème fraîche, lardons, chèvre, oignons, emmental, miel", "prix": [13.20, 15.70, 18.40] },
+      { "nom": "Savoyarde", "ingredients": "Crème fraîche, lardons, pommes de terre, reblochon, emmental, oignons", "prix": [15.20, 17.20, 19.90] },
+      { "nom": "Viroise", "ingredients": "Crème fraîche, andouille de Vire « Asselot », oignons, emmental", "prix": [15.20, 17.20, 19.90], "specialite": true },
+      { "nom": "Saumon fumé", "ingredients": "Crème fraîche, saumon fumé, emmental", "prix": [15.20, 17.20, 19.90] }
+    ]
+  },
+  "supplements": [
+    { "nom": "Supplément pizza", "prix": [1.20, 1.50, 2.20] },
+    { "nom": "Supplément andouille ou saumon", "prix": [2.00, 2.90, 4.20] }
+  ],
+  "burgers": {
+    "titre": "Burgers",
+    "items": [
+      { "nom": "Burger au Chèvre", "ingredients": "Sauce cocktail, chèvre miel, tomates confites, steak haché, poitrine grillée, oignons rouges, salade", "prix": 14.90 },
+      { "nom": "Burger Montagnard", "ingredients": "Sauce cocktail, reblochon, steak haché, tomates confites, poitrine grillée, oignons rouges, salade", "prix": 14.90 },
+      { "nom": "Burger du Four à Bois", "ingredients": "Sauce tartare, steak haché, oignons frits, salade, tomate, poitrine grillée, camembert", "prix": 14.90 },
+      { "nom": "Frites maison", "ingredients": "", "prix": 4.90 }
+    ]
+  },
+  "pates": {
+    "titre": "Pâtes",
+    "note": "Au choix : spaghetti ou tagliatelles",
+    "items": [
+      { "nom": "Bolognaise", "ingredients": "Viande hachée, sauce tomate", "prix": 12.50 },
+      { "nom": "Carbonara", "ingredients": "Lardons, œuf, crème fraîche", "prix": 13.50 },
+      { "nom": "Norvégienne", "ingredients": "Saumon fumé, tomates, crème fraîche", "prix": 15.90 },
+      { "nom": "Lasagnes maison", "ingredients": "", "prix": 13.90 }
+    ]
+  },
+  "saladesFroides": {
+    "titre": "Salades froides",
+    "items": [
+      { "nom": "Salade nature", "ingredients": "", "prix": 3.60 },
+      { "nom": "Italienne", "ingredients": "", "prix": 13.00 },
+      { "nom": "Terre et Mer", "ingredients": "Salade, magret de canard, saumon fumé, tomates, œufs durs, olives noires", "prix": 15.90 },
+      { "nom": "Club", "ingredients": "Salade, tomates, jambon blanc, comté, croûtons, crème balsamique, œufs durs", "prix": 13.00 }
+    ]
+  },
+  "saladesChaudes": {
+    "titre": "Salades chaudes",
+    "items": [
+      { "nom": "Gésiers", "ingredients": "Salade, pommes, gésiers, croûtons, lardons, tomates", "prix": 13.90 },
+      { "nom": "Chèvre", "ingredients": "Salade, lardons, toast chèvre, tomates, miel", "prix": 13.90 },
+      { "nom": "Paysanne", "ingredients": "Salade, tomates, pommes de terre, lardons, œufs durs", "prix": 12.90 },
+      { "nom": "César", "ingredients": "Salade, tomates cerise, filet de poulet pané, copeaux de parmesan, croûtons", "prix": 13.90 },
+      { "nom": "Montagnarde", "ingredients": "Salade, tomates, pommes de terre, lardons, jambon cru, toast reblochon", "prix": 14.90 },
+      { "nom": "Camembert", "ingredients": "Salade, tomates cerise, pommes de terre, jambon cru, camembert chaud (150 g), pain grillé", "prix": 15.20 },
+      { "nom": "Bocage", "ingredients": "Salade, tomates, pommes de terre, pommes poêlées, andouille de Vire « Asselot » chaude", "prix": 15.90, "specialite": true }
+    ]
+  },
+  "aPartager": {
+    "titre": "À partager",
+    "items": [
+      { "nom": "4 nuggets de poulet", "ingredients": "Servis avec frites", "prix": 5.90 },
+      { "nom": "8 accras de morue ou 8 beignets de calamars", "ingredients": "", "prix": 6.90 }
+    ]
+  },
+  "desserts": {
+    "titre": "Desserts",
+    "items": [
+      { "nom": "Île flottante", "ingredients": "", "prix": 4.50 },
+      { "nom": "Fondant au chocolat", "ingredients": "Cœur caramel", "prix": 4.90 },
+      { "nom": "Dessert du jour", "ingredients": "", "prix": 4.90 }
+    ]
+  },
+  "vins": {
+    "titre": "Carte des vins",
+    "prixIndicatifs": true,
+    "categories": [
+      {
+        "nom": "Vins de table",
+        "formats": ["Verre", "25 cl", "50 cl"],
+        "items": [
+          { "nom": "Blanc Chardonnay", "prix": [3.40, 4.80, 6.90] },
+          { "nom": "Rosé Cinsault", "prix": [3.40, 4.80, 6.90] },
+          { "nom": "Rouge Merlot", "prix": [3.40, 4.80, 6.90] }
+        ]
+      },
+      {
+        "nom": "Vins blancs",
+        "formats": ["Verre", "75 cl"],
+        "items": [
+          { "nom": "Sauvignon", "prix": [null, 14.90] },
+          { "nom": "UBY n°3", "prix": [3.40, 14.90] },
+          { "nom": "UBY n°4", "prix": [3.70, 18.90] }
+        ]
+      },
+      {
+        "nom": "Vins rosés",
+        "formats": ["Verre", "37,5 cl", "75 cl"],
+        "items": [
+          { "nom": "Cabernet d'Anjou", "prix": [3.70, null, 17.20] },
+          { "nom": "Bardolino rosé", "prix": [null, 11.90, 18.90] },
+          { "nom": "Côte de Provence", "prix": [null, 11.90, 19.90] }
+        ]
+      },
+      {
+        "nom": "Vins rouges",
+        "formats": ["37,5 cl", "75 cl"],
+        "items": [
+          { "nom": "Côtes du Rhône", "prix": [11.90, 16.90] },
+          { "nom": "1er Côte de Blaye", "prix": [12.90, 19.80] },
+          { "nom": "Saumur Champigny", "prix": [null, 19.40] },
+          { "nom": "Bardolino rouge", "prix": [11.90, 18.90] },
+          { "nom": "Montagne Saint-Émilion", "prix": [null, 24.50] },
+          { "nom": "Chianti", "prix": [null, 24.20] }
+        ]
+      },
+      {
+        "nom": "Les bulles",
+        "formats": ["75 cl"],
+        "items": [
+          { "nom": "Champagne AOP « Damien Dumez » 1er cru", "prix": [39.90] }
+        ]
+      }
+    ]
+  },
+  "boissons": {
+    "titre": "Boissons",
+    "prixIndicatifs": true,
+    "categories": [
+      {
+        "nom": "Apéritifs",
+        "items": [
+          { "nom": "Kir", "ingredients": "Pêche, cassis, mûre ou framboise — 8 cl", "prix": 3.90 },
+          { "nom": "Kir Royal", "ingredients": "8 cl", "prix": 4.90 },
+          { "nom": "Ricard", "ingredients": "2 cl", "prix": 3.80 },
+          { "nom": "Martini blanc ou rouge", "ingredients": "6 cl", "prix": 4.60 },
+          { "nom": "Porto, Muscat, Suze", "ingredients": "6 cl", "prix": 4.60 },
+          { "nom": "Marsala", "ingredients": "6 cl", "prix": 4.60 },
+          { "nom": "Américano maison", "ingredients": "10 cl", "prix": 7.10 },
+          { "nom": "Martini Gin", "ingredients": "6 cl", "prix": 5.30 },
+          { "nom": "Baby Clan Campbell", "ingredients": "2 cl", "prix": 4.30 },
+          { "nom": "Whisky Clan Campbell", "ingredients": "4 cl", "prix": 5.60 },
+          { "nom": "Whisky Glenfiddich", "ingredients": "4 cl", "prix": 6.80 },
+          { "nom": "Vodka", "ingredients": "4 cl", "prix": 5.60 },
+          { "nom": "Pommeau", "ingredients": "6 cl", "prix": 4.20 },
+          { "nom": "Supplément orange ou Coca", "ingredients": "", "prix": 1.30 }
+        ]
+      },
+      {
+        "nom": "Pour accompagner l'apéritif",
+        "items": [
+          { "nom": "Beignets de calamars ou accras de morue", "ingredients": "", "prix": 5.00 },
+          { "nom": "Assiette gourmande", "ingredients": "Jambon cru, rosette, chorizo, andouille Asselot", "prix": 10.90, "specialite": true }
+        ]
+      },
+      {
+        "nom": "Cocktails",
+        "items": [
+          { "nom": "Le Bikini", "ingredients": "Rhum, pulco, jus de pamplemousse, sirop de fraise", "prix": 6.40 },
+          { "nom": "Pinacolulu", "ingredients": "Rhum, pulco, jus d'ananas, sirop de noix de coco", "prix": 6.40 },
+          { "nom": "Pink Pearl", "ingredients": "Crème de framboise, vodka, prosecco, limonade, citron", "prix": 6.40 },
+          { "nom": "Planteur", "ingredients": "Rhum, jus de maracuja, ananas, orange", "prix": 6.40 },
+          { "nom": "Cocktail sans alcool", "ingredients": "Jus de maracuja, ananas, orange", "prix": 5.40 }
+        ]
+      },
+      {
+        "nom": "Cidres",
+        "items": [
+          { "nom": "Cidre bouché 25 cl", "ingredients": "", "prix": 4.50 },
+          { "nom": "Cidre bouché 75 cl", "ingredients": "", "prix": 11.90 }
+        ]
+      },
+      {
+        "nom": "Bières bouteille",
+        "items": [
+          { "nom": "Grimbergen blanche", "ingredients": "33 cl", "prix": 4.50 },
+          { "nom": "Mort Subite rouge", "ingredients": "25 cl", "prix": 4.50 }
+        ]
+      },
+      {
+        "nom": "Bières pression",
+        "formats": ["25 cl", "50 cl"],
+        "items": [
+          { "nom": "Leffe", "prix": [3.40, 6.80] },
+          { "nom": "Loburg", "prix": [3.20, 6.40] },
+          { "nom": "Desperados", "prix": [3.40, 6.80] },
+          { "nom": "Picon bière", "prix": [4.20, null] }
+        ]
+      },
+      {
+        "nom": "Sans alcool",
+        "items": [
+          { "nom": "Sirop à l'eau", "ingredients": "Fraise, citron, menthe ou grenadine", "prix": 2.80 },
+          { "nom": "Limonade", "ingredients": "", "prix": 3.30 },
+          { "nom": "Diabolo", "ingredients": "Fraise, citron, menthe ou grenadine", "prix": 3.50 },
+          { "nom": "Jus de fruits Pago", "ingredients": "Pomme, tomate, ananas ou abricot", "prix": 4.30 },
+          { "nom": "Coca, Schweppes, Orangina, Fanta, Ice Tea", "ingredients": "", "prix": 4.30 },
+          { "nom": "Heineken 0.0", "ingredients": "Sans alcool", "prix": 4.50 }
+        ]
+      },
+      {
+        "nom": "Eaux minérales",
+        "items": [
+          { "nom": "Vittel ou San Pellegrino", "ingredients": "50 cl", "prix": 4.10 },
+          { "nom": "Vittel ou San Pellegrino", "ingredients": "1 litre", "prix": 5.40 },
+          { "nom": "Perrier", "ingredients": "33 cl", "prix": 4.10 }
+        ]
+      }
+    ]
+  }
+}
